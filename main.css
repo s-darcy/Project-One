@@ -1,0 +1,50 @@
+html {
+    margin: 0% 5%;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 2% 0% 1%;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem; 
+}
+
+ul {
+    margin: auto;
+    width: 90%;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 5%; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 5%;
+    color: chocolate;
+    font: 1.3rem;
+}
+
+nav ul li a:hover, .dropdown-items a:hover {
+    text-decoration: visible;
+    background-color: lightgoldenrodyellow;
+}
+
+.resume-header {
+    display: inline-block;
+    text-align: center;
+    margin: 0% 3%;
+    font-weight: 200;
+}
+
+.resume-list{
+    list-style-type: square;
+}
