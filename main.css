@@ -1,5 +1,5 @@
 html {
-    margin: 0% 5%;
+    margin: 0% 10%;
 }
 
 h1, h2 {
@@ -12,13 +12,40 @@ h1 {
     font-size: 2rem;
 }
 
-h2{
+h2 {
     font-size: 1.5rem; 
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+hr {
+    box-shadow: 2px 2px 1px #888888;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #007F1D;
+}
+
+a:hover {
+    color: #CC1D00;  
 }
 
 ul {
     margin: auto;
     width: 90%;
+}
+
+sup {
+    font-size: 75%;
+    top: -0.5em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 nav ul li {
@@ -38,6 +65,8 @@ nav ul li a:hover, .dropdown-items a:hover {
     background-color: lightgoldenrodyellow;
 }
 
+/* --------- Resume Specifications ---------- */
+
 .resume-header {
     display: inline-block;
     text-align: center;
@@ -45,6 +74,32 @@ nav ul li a:hover, .dropdown-items a:hover {
     font-weight: 200;
 }
 
-.resume-list{
+.resume-header[0] {
+    margin-left: 15%;
+}
+
+.resume-list {
     list-style-type: square;
+}
+
+ul.resume-list li:last-child {
+    margin-bottom: 1.5%;
+}
+
+.resume-italics {
+    font-style: italic;
+}
+
+.resume-right { 
+    float: right;
+}
+
+.resume-left {
+    flaot: left;  
+}
+
+@media only screen and (max-device-width: 568px){
+    .resume-italics {
+        font-size: 1.4rem;
+}
 }
