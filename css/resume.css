@@ -1,0 +1,33 @@
+/* --------- Resume Specifications ---------- */
+
+.resume-header {
+    display: inline-block;
+    text-align: center;
+    margin: 0% 3%;
+    font-weight: 200;
+}
+
+.resume-header[0] {
+    margin-left: 15%;
+}
+
+.resume-list {
+    list-style-type: square;
+}
+
+ul.resume-list li:last-child {
+    margin-bottom: 1.5%;
+}
+
+.resume-italics {
+    font-style: italic;
+}
+
+.resume-right { 
+    float: right;
+}
+
+.resume-left {
+    flaot: left;  
+}
+

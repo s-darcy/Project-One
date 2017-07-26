@@ -1,0 +1,103 @@
+/*
+font-family: 'Vidaloka', serif;
+font-family: 'Prata', serif;
+font-family: 'Lusitana', serif;
+*/
+
+html {
+    margin: 0% 10%;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 2% 0% 1%;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem; 
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+hr {
+    box-shadow: 2px 2px 1px #888888;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #007F1D;
+}
+
+a:hover {
+    color: #CC1D00;  
+}
+
+ul {
+    margin: auto;
+    width: 90%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+sup {
+    font-size: 75%;
+    top: -0.5em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 5%; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 5%;
+    color: chocolate;
+    font: 1.3rem;
+}
+
+nav ul li a:hover, .dropdown-items a:hover {
+    text-decoration: visible;
+    background-color: lightgoldenrodyellow;
+}
+
+@media only screen and (max-device-width: 568px){
+    .resume-italics {
+        font-size: 1.4rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
