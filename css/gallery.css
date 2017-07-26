@@ -63,6 +63,22 @@ figcaption {
     display: inline-block;
 }
 
+@media only screen and (max-device-width: 568px){
+    #imageGallery {
+	   display: block;
+    }
+    figure {
+        width: 88%;
+        margin: 1.5%;
+    }
+    figure img {
+        display: block;
+    }
+    .galleryHeader{
+        padding: 2% 5%;
+    }
+}
+
 /* --------- app.js Specifications ---------- */
 
 .button-right, .button-left {

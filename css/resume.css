@@ -31,3 +31,8 @@ ul.resume-list li:last-child {
     flaot: left;  
 }
 
+@media only screen and (max-device-width: 568px){
+    .resume-italics {
+        font-size: 1.4rem;
+    }
+}
