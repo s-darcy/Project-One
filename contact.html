@@ -6,17 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Please take some time to submit some contact information about yourself.">  
     <title>Shane Darcy's Contact Page</title>
+      <link href="https://fonts.googleapis.com/css?family=Brawler|Tienne|Unna:400,400i" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/main.css">
       <link rel="stylesheet" type="text/css" href="css/contact.css">
   </head>
   <body>
       <h1>Contact Me</h1>
-      <form>
-        <input >
-      
-      </form>
-    <!--Contact page - contact form with Name, Email, Phone, Company, Comments/Questions. You may add your phone and/or mailing address if you like. To submit the form, name, phone and email are required. Use JavaScript to make sure those fields are filled in and do not submit the form if they are not. Provide error message to user instead.-->
+      <!--Contact page - contact form with Name, Email, Phone, Company, Comments/Questions. You may add your phone and/or mailing address if you like. To submit the form, name, phone and email are required. Use JavaScript to make sure those fields are filled in and do not submit the form if they are not. Provide error message to user instead.-->
+        <form method="GET">
+            <label for="firstname">First Name:</label> 
+                <input type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
+            <label for="laststname">Last Name:</label>
+                <input type="text" name="lastname" placeholder="Legal Last Name">
+            <label for="email">Email:</label> 
+                <input type="email" value="" name="emailid" size="30" placeholder="Valid Email Address">
+            <label for="phone">Telephone:</label> 
+                <input type="tel" name="usrtel" placeholder="Full Phone Number">
+            <label for="company">Company:</label>
+                <input type="text" name="name" value="" placeholder="Company's Name">
+            <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" cols="25" rows="7" placeholder="Drop Us a Line. Feedback Is Always Appreciated."></textarea>    
+            <input type="submit" value="Save">
+        </form>
+
 
     <!--Footer: social media links. LinkedIn required. Link to http://road2hire.org/-->
       
