@@ -10,25 +10,23 @@ html {
 
 h1, h2 {
     text-align: center;
-    margin: 2% 0% 1%;
     font-weight: 600;
 }
 
 h1 {
     font-size: 2rem;
+    margin: 2% 0% 1%;
 }
 
 h2 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
+    margin: 1% 0% 1%;
 }
 
 h3 {
     font-size: 1.25rem;
     font-weight: 600;
-}
-
-hr {
-    box-shadow: 2px 2px 1px #888888;
+    display: block;
 }
 
 a {
@@ -76,11 +74,7 @@ nav ul li a:hover, .dropdown-items a:hover {
     background-color: lightgoldenrodyellow;
 }
 
-@media only screen and (max-device-width: 568px){
-    .resume-italics {
-        font-size: 1.4rem;
-}
-}
+
 
 
 

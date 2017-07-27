@@ -1,4 +1,13 @@
 /* --------- Resume Specifications ---------- */
+h1 {
+    margin-bottom: 12px;
+}
+
+h1, .resume-box-shadow {
+    border-bottom: 1px solid black;
+    box-shadow: 0px 2px 0px #888888;
+    padding-bottom: 12px;
+}
 
 .resume-header {
     display: inline-block;
@@ -21,14 +30,17 @@ ul.resume-list li:last-child {
 
 .resume-italics {
     font-style: italic;
+    display: block;
 }
 
 .resume-right { 
     float: right;
+    display: block;
 }
 
 .resume-left {
-    flaot: left;  
+    float: left;
+    display: block;
 }
 
 @media only screen and (max-device-width: 568px){
