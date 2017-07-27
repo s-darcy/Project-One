@@ -15,19 +15,31 @@
       <h1>Contact Me</h1>
       <!--Contact page - contact form with Name, Email, Phone, Company, Comments/Questions. You may add your phone and/or mailing address if you like. To submit the form, name, phone and email are required. Use JavaScript to make sure those fields are filled in and do not submit the form if they are not. Provide error message to user instead.-->
         <form method="GET">
-            <label for="firstname">First Name:</label> 
-                <input type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
-            <label for="laststname">Last Name:</label>
-                <input type="text" name="lastname" placeholder="Legal Last Name">
-            <label for="email">Email:</label> 
-                <input type="email" value="" name="emailid" size="30" placeholder="Valid Email Address">
-            <label for="phone">Telephone:</label> 
-                <input type="tel" name="usrtel" placeholder="Full Phone Number">
-            <label for="company">Company:</label>
-                <input type="text" name="name" value="" placeholder="Company's Name">
-            <label for="comments">Comments:</label>
-                <textarea name="comments" id="comments" cols="25" rows="7" placeholder="Drop Us a Line. Feedback Is Always Appreciated."></textarea>    
-            <input type="submit" value="Save">
+            <div class="inputFormat">
+                <label for="firstname">First Name:</label> 
+                    <input type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
+            </div>    
+            <div class="inputFormat">
+                <label for="laststname">Last Name:</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Legal Last Name">
+            </div>    
+            <div class="inputFormat">
+                <label for="email">Email:</label> 
+                    <input type="email" value="" name="emailid" id="email" size="30" placeholder="Valid Email Address">
+            </div>    
+            <div class="inputFormat">
+                <label for="phone">Telephone:</label> 
+                    <input type="tel" name="usrtel" id="phone" placeholder="Full Phone Number">
+            </div>    
+            <div class="inputFormat">
+                <label for="company">Company:</label>
+                    <input type="text" name="name" value="" id="company" placeholder="Company's Name">
+            </div>    
+            <div class="inputFormat">
+                <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments" cols="25" rows="7" placeholder="Drop Us a Line. Feedback Is Always Appreciated."></textarea>
+            </div>    
+            <input class="submit" type="submit" value="Submit">
         </form>
 
 
@@ -37,6 +49,6 @@
           src="https://code.jquery.com/jquery-3.2.1.js"
           integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
           crossorigin="anonymous"></script>
-      <script type="text/javascript" src="javascript/main.js"></script>
+      <script type="text/javascript" src="javascript/contact.js"></script>
   </body>
 </html>
