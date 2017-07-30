@@ -70,11 +70,12 @@ nav ul li a {
 
 nav ul li a:hover, .dropdown-items a:hover {
     text-decoration: visible;
-    background-color: #005DCC;
+    background-color: #633200;
     color: white;
     height: 100%;
     width: 100%;
     font: 1.5rem;
+    padding: 7px 2%;
 }
 
 

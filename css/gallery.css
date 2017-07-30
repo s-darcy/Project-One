@@ -4,23 +4,32 @@
 #gallery {
     background-color: #C5DFFF;
     background-image: url("images/background-image.png");
-} 
+}
+
+.headerPadding, .galleryHeader {
+    margin: 0 auto;
+}
+
+.headerPadding {
+    background-color: white;
+    padding: 9px;
+    box-shadow: 5px 5px 6px #56697F;
+    width: 50%;
+    margin-top: 12px;
+}
 
 .galleryHeader {
     font-size: 3rem;
     font-family: 'Prata', serif;
     color: #25467F;
-    text-shadow: 1px 1px #C5DBFF;
-    box-shadow: 5px 5px 6px #56697F;
-    width: 60%;
+    text-shadow: 1px 1px 1px white;
     text-align: center;
-    margin: 3% auto 1%;
-    border-bottom: 3px solid transparent;
-    border-radius: 2px;
-    background: white;
-    padding-top: 1%;
+    background-color: #C5DFFF;
     opacity: .90;
+    width: 100%;
 }
+
+
 
 #imageGallery {
 	list-style: none;
@@ -46,7 +55,7 @@ figure img, figcaption {
 
 figure img {
     display: inline-block;
-	padding: 5px;
+	padding: 9px;
 	background: white;
 	margin: 18px 0px 0px;
 }
