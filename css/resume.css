@@ -10,7 +10,8 @@ h1, .resume-box-shadow {
 }
 
 h2 {
-   margin: 12px 0px; 
+   margin: 12px 0px;
+    font-weight: 600;
 }
 
 h3 {
@@ -48,7 +49,15 @@ h4 {
     font-style: italic;
 }
 
+.resume-list {
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-device-width: 568px){
+    body {
+    width: 96%;
+    margin: 6% 1%;
+    }
     .resume-italics {
         font-size: 1.4rem;
     }
