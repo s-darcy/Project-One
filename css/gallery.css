@@ -2,8 +2,8 @@
 /* --------- Gallery Specifications ---------- */
 
 #gallery {
+    background-image: url('../images/background-image.png');
     background-color: #C5DFFF;
-    background-image: url("images/background-image.png");
 }
 
 .headerPadding, .galleryHeader {
@@ -28,8 +28,6 @@
     opacity: .90;
     width: 100%;
 }
-
-
 
 #imageGallery {
 	list-style: none;

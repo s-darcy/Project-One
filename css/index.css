@@ -1,0 +1,8 @@
+body {
+    background-image: url('../images/SanFranciscoBay.JPG');
+    background-size: cover;
+}
+
+.index-background-image {
+    opacity: .8;
+}
