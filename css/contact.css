@@ -19,7 +19,7 @@ label, h1 {
 
 h1 {
     font-size:  4.5rem;
-    margin: 0% auto 9%;
+    margin: -4% auto 2%;
 }
 
 label {
@@ -82,9 +82,19 @@ textarea {
 	   display: block;
        margin: auto;
     }
+    h1 {
+        font-size: 2.5rem;
+    }
+    label {
+        font-size: 1.5rem;
+    }
     .inputFormat {
-        width: 80%;
+        width: 90%;
         margin-bottom: 2.5%;
+    }
+    .submit {
+        margin: 0 auto;
+        width: 50%;
     }
 }
 
@@ -93,9 +103,16 @@ textarea {
 	   display: block;
        margin: auto;
     }
+    .formSubmission {
+        width: 100%;
+    }
     .inputFormat {
-        width: 80%;
+        width: 125%;
         margin-bottom: 2.5%;
+    }
+    .submit {
+        margin: 0 auto;
+        width: 50%;
     }
 }
 

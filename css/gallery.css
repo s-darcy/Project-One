@@ -82,7 +82,11 @@ figcaption {
         display: block;
     }
     .galleryHeader{
-        padding: 2% 5%;
+        font-size: 2rem;
+        padding: 2% 0%;
+    }
+    .headerPadding {
+        width: 70%;
     }
 }
 
@@ -98,7 +102,7 @@ figcaption {
         display: block;
     }
     .galleryHeader {
-        padding: 2% 5%;
+        padding: 2% 0%;
         margin: auto;
     }
     .figcaption {

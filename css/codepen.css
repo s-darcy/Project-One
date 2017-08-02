@@ -54,13 +54,15 @@ img {
     box-shadow: 20px #B2A38A;
 }
 
-@media only screen and (min-device-width: 569px) and (max-device-width: 1025px){
+@media only screen and (max-device-width: 1025px){
     body {
 	   display: block;
     }
+    .allCodePenDivs > a {
+        display: block;
+        width: 100%;
+    }
 }
-
-
 
 
 

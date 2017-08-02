@@ -60,3 +60,31 @@ h1 {
     width: 100%;
     font-size: 18px;
 }
+
+@media only screen and (max-device-width: 568px){
+    html, body {
+        margin: 0px auto;
+    }
+    html {
+        width: 80%;
+    }
+    body {
+        width: 100%;
+    }
+    .card {
+        margin: 30px auto;
+    }
+}
+
+@media only screen and (min-device-width: 569px) and (max-device-width: 1024px){
+    .card {
+        margin: 110px auto;
+    }
+}
+
+
+
+
+
+
+
