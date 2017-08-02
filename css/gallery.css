@@ -111,6 +111,29 @@ figcaption {
     }
 }
 
+/* ----------- Nexus 5x ----------- */
+/* Portrait */
+
+@media only screen
+    and (device-width: 412px) 
+    and (device-height: 732px)
+    and (orientation:portrait) {
+    html, body {     
+        width: 102% !important;
+    }
+}
+
+/* ----------- Nexus 6p ----------- */
+/* Landscape */
+@media only screen
+    and (min-width: 412px)
+    and (max-width: 732px)
+    and (orientation:landscape){
+    body {
+        width: 105% !important;
+    }
+}
+
 /* --------- app.js Specifications ---------- */
 
 .button-right, .button-left {

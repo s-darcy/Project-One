@@ -56,10 +56,44 @@ h4 {
 
 @media only screen and (max-device-width: 568px){
     body {
-    width: 96%;
+    width: 100%;
     margin: 6% 1%;
     }
     .resume-italics {
         font-size: 1.4rem;
     }
+}
+
+/* ----------- Galaxy S5 ----------- */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+      html, body {
+          width: 98% !important;
+      }
+}
+
+/* ----------- Nexus 6p ----------- */
+/* Landscape */
+@media only screen
+    and (min-width: 412px)
+    and (max-width: 732px)
+    and (orientation:landscape){
+    body {
+        width: 97% !important;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      body {
+        width: 97% !important;
+      }
 }

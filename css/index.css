@@ -1,6 +1,7 @@
 body {
     background-image: url('../images/SanFranciscoBay.JPG');
     background-size: cover;
+    background-repeat: no repeat;
 }
 
 h1 {
@@ -80,6 +81,31 @@ h1 {
     .card {
         margin: 110px auto;
     }
+}
+
+@media only screen
+    and (device-width: 412px) 
+    and (device-height: 732px)
+    and (orientation:portrait) {
+    html, body {     
+        width: 99%;
+    }
+    .index-background-image {
+        width: 97%;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      footer a img {
+        margin: -20px 3px 10px;
+        width: 30px;
+    } 
 }
 
 
