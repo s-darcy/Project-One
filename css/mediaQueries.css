@@ -77,6 +77,14 @@
       html, body {
           width: 100%;
       }
+      .card {
+          width: 100%;
+          margin: 0px;
+      }
+      footer a img {
+          margin: 0px 8px 10px;
+          width: 30px;
+    }
 }
 
 /* Landscape */
@@ -89,12 +97,15 @@
         margin-top: -50px;
         width: 47%;
     }
+      label {
+          font-size: 1.5rem;
+      }
     footer a img {
-        margin: -20px 3px 10px;
+        margin: 0px 8px 10px;
         width: 30px;
     }
     footer {
-        margin-top: -100px;
+        margin-top: 0px;
     }  
 }
 
@@ -197,16 +208,31 @@ and (orientation:portrait) {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-      html, body {
+      body {
+        width: 100%;
+      }
+      html {
         width: 100%;
       }
       .index-background-image {
           width: 100%;
-          margin-left: 0%;
+          margin-left: 1%;
       }
       .card {
-          width: 85%;
+          width: 100%;
+          margin: 0px;
       }
+      h1 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+      }
+      footer a img {
+          margin: 10px 8px 10px;
+          width: 28px;
+    }
+      footer a img:first-child {
+          margin-left: -10px;
+    } 
 }
 
 /* Landscape */
@@ -215,7 +241,20 @@ and (orientation:portrait) {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
-
+      html {
+          width: 100%;
+      }
+      
+      .card {
+          margin-top: 3px;
+      }
+      .index-background-image {
+          width: 94%;
+      }
+      footer a img {
+          margin: 5px 3px 10px;
+          width: 30px;
+    } 
 }
 
 /* ----------- iPhone 6 ----------- */
@@ -234,7 +273,20 @@ and (orientation:portrait) {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-
+      .index-background-image {
+          margin-left: 0%;
+      }
+      .card {
+          width: 100%;
+          max-width: none;
+      }
+      figure {
+            width: 92%;
+            margin: 1%;
+      }
+      footer a img {
+          margin: 16px;
+    }
 }
 
 /* Landscape */
@@ -243,7 +295,23 @@ and (orientation:portrait) {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-
+      html {
+          width: 100%;
+      }
+      .card {
+          margin-top: -30px;
+      }
+      figure {
+          width: 95%;
+          margin: 1%;
+      }
+      .index-background-image {
+          width: 100% !important;
+      }
+      footer a img {
+          margin: 10px 3px 10px;
+          width: 30px;
+      }
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -262,7 +330,9 @@ and (orientation:portrait) {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-
+      .card {
+          margin: 10px auto;
+      }
 }
 
 /* Landscape */
@@ -271,7 +341,26 @@ and (orientation:portrait) {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-
+      h1 {
+          font-size: 2.5rem;
+          width: 75%;
+          margin-top: -30px;
+      }
+      figure img {
+          display: inline-block;
+          padding: 6px;
+          background: white;
+          margin: 18px 10px 0px;
+      }
+      .allCodePenDivs {
+          display: -webkit-flex;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .allCodePenDivs > a {
+          width: 44%;
+          margin: 2%;
+      }
 }
 
 * ----------- HTC One ----------- */
@@ -372,7 +461,35 @@ and (orientation:portrait) {
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+      h1 {
+          font-size: 2.5rem;
+          width: 75%;
+          margin-top: -30px;
+      }
+      .card {
+          max-width: none;
+          width: 60%;
+      }
+      figure img, figcaption {
+          display: inline-block;
+          padding: 6px;
+      }
+      figcaption {
+          margin-left: 10px;
+      }
+      .allCodePenDivs {
+          display: -webkit-flex;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .allCodePenDivs > a {
+          width: 44%;
+          margin: 2%;
+      }
+      footer a img {
+          margin: 40px 10px 10px;
+          width: 60px;
+      }
 }
 
 /* Landscape */
@@ -381,7 +498,71 @@ and (orientation:portrait) {
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
+      h1 {
+          font-size: 2.5rem;
+          width: 75%;
+          margin-top: -30px;
+      }
+      .allCodePenDivs {
+          display: -webkit-flex;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .allCodePenDivs > a {
+          width: 44%;
+          margin: 2%;
+      }
+      figure img, figcaption {
+          display: inline-block;
+          padding: 6px;
+      }
+      figcaption {
+          margin-left: 10px;
+      }
+       footer a img {
+          margin: 40px 10px 10px;
+          width: 60px;
+      }
+}
 
+/* ----------- iPad Pro ----------- */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+      .card {
+          max-width: none;
+          width: 65%;
+          margin-top: 70px;
+      }
+       footer a img {
+          margin: 40px 10px 20px;
+          width: 60px;
+      }
+      .inputFormat {
+          width: 179%;
+          height: 99%;
+          margin: 0% 0% 14.5% -25%;
+      }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+      .card {
+          max-width: none;
+          width: 50%;
+          margin-top: 70px;
+      }
+      footer a img {
+          margin: 40px 10px 20px;
+          width: 60px;
+      }
 }
 
 /* ----------- Galaxy Tab 10.1 ----------- */

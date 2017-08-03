@@ -55,7 +55,7 @@ figure img {
     display: inline-block;
 	padding: 9px;
 	background: white;
-	margin: 18px 0px 0px;
+	margin: 18px 10px 0px;
 }
 
 figcaption {
@@ -90,6 +90,7 @@ figcaption {
     }
 }
 
+/*
 @media only screen and (min-device-width: 569px) and (max-device-width: 1025px){
     #imageGallery {
 	   display: block;
@@ -110,6 +111,7 @@ figcaption {
         font-size: 1.5rem;
     }
 }
+*/
 
 /* ----------- Nexus 5x ----------- */
 /* Portrait */
@@ -132,6 +134,27 @@ figcaption {
     body {
         width: 105% !important;
     }
+}
+
+/* ----------- iPhone 6 ----------- */
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+      body {
+        width: 100% !important;
+    }
+      #imageGallery, figure img {
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90%;
+      }
+      figure img {
+    display: inline-block;
+      }
 }
 
 /* --------- app.js Specifications ---------- */
