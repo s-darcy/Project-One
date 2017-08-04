@@ -25,6 +25,7 @@ p {
     word-wrap: normal;
     color: #B2A38A;
     font-weight: 400;
+    height: auto;
 }
 
 img {
