@@ -7,7 +7,34 @@ $(document).ready(function(){
     var $emailValidator = '^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$';
     var $namesValidator = '/^[a-z0-9_-]{3,16}$/';
     
+      
+//        $('input').on("keydown", function() {
+//            var inputValues = {
+//                $firstname : $('#firstname').val(),
+//                $lastname : $('#lastname').val(),
+//                $email : $('#email').val(),
+//                $phone : $('#phone').val(),
+//                $company : $('#company').val()
+//            }
+//            console.log('inputValues');
+//            
+//            for(var prop in inputValues) {
+//                console.log('inputValues');
+//                
+//                if(inputValues.prop !==""){
+//                    
+//                    //Submit button changes opacity when all 5 fields have inputs filled out
+//                    $('.submit').css('opactity', '1');
+//                    
+//                }
+//            };     
+//        });
+            
+
+
+          
     
+//--------------This Works!------------------------//     
     $(".submit").click(function(e) {  
         //.filter() creates a new array will all elements that pass the test implemented by the provided function        
         var filledInputs = $(this).parent().find("input").filter(function(e) {
@@ -19,18 +46,13 @@ $(document).ready(function(){
             } else {
                 alert('Thank you for filling out the contact page.');
             };
-        });  
- });   
+        });
+//--------------This Works!------------------------//
+    
+}); 
 
     
-//  $(".next").click(function() {
-//    var empty = $(this).parent().find("input").filter(function() {
-//        return this.value === "";
-//    });
-//    if(empty.length) {
-//        //At least one input is empty
-//    }
-//});
+
 //    
 //    //All - Make sure all form inputs (not textarea) have at least 1 character before populating the "Submit" button
 
