@@ -1,45 +1,40 @@
-//$(document).ready(function(){
-//   $('#formSubmission').submit(function(e){
-//     e.preventDefault();
-//       console.log(e);
-//       
-//Variables
-        //var $allInputs = $(':input'); //the : before means "all" inputs
-        var $firstname = $('#firstname').val();
-        var $lastname = $('#lastname').val();
-        var $email = $('#email').val();
-        var $phone = $('#phone').val();
-        var $company = $('#company').val();
-        var $phoneValidator = /[0-9-()+]{3,20}/;
-        var $emailValidator = '^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$';
-        var $namesValidator = '/^[a-z0-9_-]{3,16}$/';
-       
-//Create function that loops over all the inputs looking for a value
-    //.filter() creates a new array will all elements that pass the test implemented by the provided function
-    //.trim() removes white space from both ends of a string
-           var inputsEntered = $("input").filter(function() { 
-              return $.trim($(this).val()).length === 0
-           }).length == 0;
+$(document).ready(function(){
+   $('.submit').css("opacity", ".6");
 
-//All - Make sure all form inputs (not textarea) have at least 1 character before populating the "Submit" button
-        $('.submit').click(function(){
-           if ('inputsEntered' === true){
-                alert('Thank you for filling out the contact page.');
-               $('.submit').css("opacity", "1");
-            } else {
-                alert('Please make sure that all fields are complete before clicking submit.');
-            };
+    //Variables
+    var $firstname, $lastname, $email, $phone, $company;
+    var $phoneValidator = /[0-9-()+]{3,20}/;
+    var $emailValidator = '^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$';
+    var $namesValidator = '/^[a-z0-9_-]{3,16}$/';
+    
+    
+    $(".submit").click(function(e) {  
+        //.filter() creates a new array will all elements that pass the test implemented by the provided function        
+        var filledInputs = $(this).parent().find("input").filter(function(e) {
+            return this.value === "";
         });
-          
-//Keeps inputs from disappearing
-//        var sessionInputs = document.getElementsByClassName("formSubmission");
-//        if (sessionStorage.getItem("autosave")){
-//            sessionInputs.value = sessionStorage.getItem("autosave");
-//        };
-//        sessionInputs.addEventListener("change", function() {
-//        sessionStorage.setItem("autosave", sessionInputs.value);
-//        }); 
-//       
+            if(filledInputs.length) {
+                alert('Please make sure that all fields are complete before clicking submit.');
+                e.preventDefault(); 
+            } else {
+                alert('Thank you for filling out the contact page.');
+            };
+        });  
+ });   
+
+    
+//  $(".next").click(function() {
+//    var empty = $(this).parent().find("input").filter(function() {
+//        return this.value === "";
+//    });
+//    if(empty.length) {
+//        //At least one input is empty
+//    }
+//});
+//    
+//    //All - Make sure all form inputs (not textarea) have at least 1 character before populating the "Submit" button
+
+
 //       
 //First Name Validator Function
 //        function firstNameValidation(){

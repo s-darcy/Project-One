@@ -78,7 +78,7 @@
           width: 100%;
       }
       .card {
-          width: 100%;
+          width: 100% !important;
           margin: 0px;
       }
       footer a img {
