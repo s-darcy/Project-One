@@ -34,29 +34,35 @@
         <form id="formSubmission" method="get">
             <div class="inputFormat">
                 <label for="firstname">First Name:</label> 
-                <input type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
+                <input pattern="[a-z]{1,15}" type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
+                <p id="firstnameAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="lastname">Last Name:</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Legal Last Name">
+                <input pattern="[a-z]{1,15}" type="text" name="lastname" id="lastname" placeholder="Legal Last Name">
+                <p id="lastnameAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="email">Email:</label> 
                 <input type="email" value="" name="email" id="email" size="30" placeholder="Valid Email Address">
+                <p id="emailAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="phone">Telephone:</label> 
                 <input type="tel" name="usrtel" id="phone" placeholder="Full Phone Number">
+                <p id="telephoneAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="company">Company:</label>
-                <input type="text" name="name" value="" id="company" placeholder="Company's Name">
+                <input pattern="[a-z]{1,15}" type="text" name="name" value="" id="company" placeholder="Company's Name">
+                <p id="companyAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="comments">Comments:</label>
                 <textarea name="comments" id="comments" cols="25" rows="7" placeholder="Drop Us a Line. Feedback Is Always Appreciated."></textarea>
-            </div>    
-            <input class="submit" type="submit" value="Submit">
+            </div>
+                <input class="submit" type="submit" value="Submit">
+            <p id="p2"></p>   
         </form>
         <div class="footerWrapper"></div><!--Footer Wrapper--> 
             <footer>
