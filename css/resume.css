@@ -25,6 +25,11 @@ h4 {
     width: 100%;
 }
 
+a {
+    color: #007F1D;
+    font-weight: 700;
+}
+
 .resume-header {
     display: inline-block;
     text-align: center;

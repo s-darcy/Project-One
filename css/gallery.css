@@ -55,14 +55,13 @@ figure img {
     display: inline-block;
 	padding: 9px;
 	background: white;
-	margin: 18px 10px 0px;
+	margin: 18px 0px 0px;
 }
 
 figcaption {
     text-align: center;
     font-family: 'Lusitana', serif;
     padding: 2.5%;
-    margin-top: -1.5%;
     word-wrap: normal;
     background-color: #005DCC;
     color: white;

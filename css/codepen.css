@@ -17,7 +17,8 @@ h1 {
 h2 {
     margin: 12px 0px;
     font-weight: 400;
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px #B2A38A;
+    color: white;
 }
 
 p {
