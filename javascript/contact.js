@@ -22,11 +22,12 @@ $(".submit").click(function(e) {
             let $firstname = $('#firstname').val();
             var firstnameRegExp = new RegExp("^[a-zA-Z]+$");
             if(firstnameRegExp.test($firstname)){
-                return true; 
+                true; 
             } else {
-               return alert(`" ${$('#firstname').val()}" is not a valid first name. Please insert alphabet characters only.`);
+               alert(`" ${$('#firstname').val()}" is not a valid first name. Please insert alphabet characters only.`);
                 $('#firstname').focus();
             }
+            return true;
             console.log($firstname);
         };
         firstNameValidation();
@@ -36,11 +37,12 @@ $(".submit").click(function(e) {
             let $lastname = $('#lastname').val();
             var lastnameRegExp = new RegExp("^[a-zA-Z]+$");
             if(lastnameRegExp.test($lastname)){
-                return true;
+                true;
             } else {
-               return alert(`" ${$('#lastname').val()}" is not a valid last name. Please insert alphabet characters only.`);
+               alert(`" ${$('#lastname').val()}" is not a valid last name. Please insert alphabet characters only.`);
                $('#lastname').focus(); 
             }
+            return true;
             console.log($lastname);
         };
         lastNameValidation();  
@@ -49,11 +51,11 @@ $(".submit").click(function(e) {
         function emailValidation(){
             let $email = $('#email').val();
             var emailRegExp = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$');
-            if(emailRegExp.test($email)){
-                return true;
-            } else {
-               return alert(`" ${$('#email').val()}" is not a valid email address. Please insert alphabet characters only.`);
+            if (emailRegExp.test($email)){
+                alert(`" ${$('#email').val()}" is not a valid email address. Please insert alphabet characters only.`);
                 $('#email').focus();
+            } else {
+               return true;
             }
             console.log($email);
         };
@@ -64,14 +66,14 @@ $(".submit").click(function(e) {
             let $phone = $('#phone').val();
             var phoneRegExp = new RegExp(/[0-9-()+]{3,20}/);
             if ($phone.length !== 10){
-                return alert("Please make sure that your phone number is 10 digits long.");
-            } else if (phoneRegExp.test(!$phone)){
-                return alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numberic characters only.`);
+                alert("Please make sure that your phone number is 10 digits long.");
+            } else if (phoneRegExp.test($phone)){
+                alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numeric characters only.`);
                 $('#phone').focus();
             } else {
                 return true;
+                console.log($phone);
             }
-            console.log($phone);
         };
         phoneValidation();
 
@@ -80,11 +82,12 @@ $(".submit").click(function(e) {
             let $company = $('#company').val();
             var companyRegExp = new RegExp("^[a-zA-Z]+$");
             if (companyRegExp.test($company)){
-                return true;
+                true;
             } else {
-               return alert(`" ${$('#company').val()}" is not a valid company name. Please insert alphabet characters only.`);
+               alert(`" ${$('#company').val()}" is not a valid company name. Please insert alphabet characters only.`);
                 $('#company').focus();
             }
+            return true;
             console.log($company);
         };
         companyValidation();
