@@ -7,7 +7,7 @@ $(".submit").click(function(e) {
             return this.value === "";
         });
         if(filledInputs.length) {
-            alert('Please make sure that all fields are complete before clicking submit.');
+            return alert('Please make sure that all fields are complete before clicking submit.');
             e.preventDefault(); 
         } else {
             return $('#p2').text('Thank you for filling out the contact page.');
@@ -57,21 +57,19 @@ $(".submit").click(function(e) {
             }
             console.log($email);
         };
-        
         emailValidation();
         
 //Phone - Make sure phone is only numeric characters and has at least 10 digits
         function phoneValidation(){
             let $phone = $('#phone').val();
             var phoneRegExp = new RegExp(/[0-9-()+]{3,20}/);
-            if (phoneRegExp.test($phone)){
-                return true;
-            } else if ($phone.length < 10){
-                $('#phoneAlert').text("Please make sure that your phone number is 10 digits long.");
+            if ($phone.length !== 10){
+                return alert("Please make sure that your phone number is 10 digits long.");
+            } else if (phoneRegExp.test(!$phone)){
+                return alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numberic characters only.`);
                 $('#phone').focus();
             } else {
-               return alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numberic characters only.`);
-                $('#phone').focus();
+                return true;
             }
             console.log($phone);
         };
@@ -94,23 +92,6 @@ $(".submit").click(function(e) {
 });//end document.ready 
 
 
-//
-//        //Variables
-//    let $firstname, $lastname, $email, $phone, $company;
-//    var firstnameRegExp = new RegExp("^[a-zA-Z]+$");
-//    var lastnameRegExp = new RegExp("^[a-zA-Z]+$");
-//    var companyRegExp = new RegExp("^[a-zA-Z]+$");
-//    var phoneRegExp = new RegExp(/[0-9-()+]{3,20}/);
-//    var emailRegExp = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$');
-//    
-////Input Values  
-//        $firstname = $('#firstname').val();
-//        $lastname = $('#lastname').val();
-//        $email = $('#email').val();
-//        $phone = $('#phone').val();
-//        $company = $('#company').val();
-//
-//
 ////--------------EXPERIMENTAL Submit Opacity function--------------------//      
 ////        $('input').on("keydown", function() {
 ////            var inputValues = {

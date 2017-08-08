@@ -34,12 +34,12 @@
         <form id="formSubmission" method="get">
             <div class="inputFormat">
                 <label for="firstname">First Name:</label> 
-                <input pattern="[a-z]{1,15}" type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
+                <input type="text" name="firstname" id="firstname" placeholder="Legal First Name"/>
                 <p id="firstnameAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="lastname">Last Name:</label>
-                <input pattern="[a-z]{1,15}" type="text" name="lastname" id="lastname" placeholder="Legal Last Name">
+                <input type="text" name="lastname" id="lastname" placeholder="Legal Last Name">
                 <p id="lastnameAlert"></p>
             </div>    
             <div class="inputFormat">
@@ -49,12 +49,12 @@
             </div>    
             <div class="inputFormat">
                 <label for="phone">Telephone:</label> 
-                <input type="tel" name="usrtel" id="phone" placeholder="Full Phone Number">
+                <input type="tel" name="usrtel" id="phone" maxlength="10" placeholder="Full Phone Number">
                 <p id="telephoneAlert"></p>
             </div>    
             <div class="inputFormat">
                 <label for="company">Company:</label>
-                <input pattern="[a-z]{1,15}" type="text" name="name" value="" id="company" placeholder="Company's Name">
+                <input type="text" name="name" value="" id="company"  placeholder="Company's Name">
                 <p id="companyAlert"></p>
             </div>    
             <div class="inputFormat">
