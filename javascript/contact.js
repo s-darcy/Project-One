@@ -1,22 +1,6 @@
 $(".submit").click(function(e) { 
     e.preventDefault();
 
-    //Variables
-    let $firstname, $lastname, $email, $phone, $company;
-    var regex = new RegExp("^[a-zA-Z]+$");
-    var phoneregex = new RegExp(/[0-9-()+]{3,20}/);
-    var emailregex = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$');
-    
-//Input Values  
-        $firstname = $('#firstname').val();
-        $lastname = $('#lastname').val();
-        $email = $('#email').val();
-        $phone = $('#phone').val();
-        $company = $('#company').val();
-
-    console.log($firstname);
-    
-
 //--------------All Inputs Field Checker------------------------//     
     //.filter() creates a new array will all elements that pass the test implemented by the provided function        
         var filledInputs = $(this).parent().find("input").filter(function(e){
@@ -28,75 +12,103 @@ $(".submit").click(function(e) {
         } else {
             return $('#p2').text('Thank you for filling out the contact page.');
         };
-   
-    
+});//end document.ready 
+
+$(".submit").click(function(e) { 
+    e.preventDefault();
+
 //First Name Validator Function
         function firstNameValidation(){
-            if(regex.test($firstname.length)){
-                return true;
-                $('#firstname').focus();
+            let $firstname = $('#firstname').val();
+            var firstnameRegExp = new RegExp("^[a-zA-Z]+$");
+            if(firstnameRegExp.test($firstname)){
+                return true; 
             } else {
-               return alert(`Your description: " ${$('#firstname').val()}" is not a good description. Please insert alphabet characters only.`); 
+               return alert(`" ${$('#firstname').val()}" is not a valid first name. Please insert alphabet characters only.`);
+                $('#firstname').focus();
             }
+            console.log($firstname);
         };
         firstNameValidation();
-        console.log($firstname);
-
+  
 //Last Name Validator Function
-        function lastNameValidation($lastname){
-            if(regex.test($lastname)){
+        function lastNameValidation(){
+            let $lastname = $('#lastname').val();
+            var lastnameRegExp = new RegExp("^[a-zA-Z]+$");
+            if(lastnameRegExp.test($lastname)){
                 return true;
             } else {
-               return alert(`Your description: " ${$('#lastname').val()}" is not a good description. Please insert alphabet characters only.`);
-                $('#lastname').focus();
-            };
+               return alert(`" ${$('#lastname').val()}" is not a valid last name. Please insert alphabet characters only.`);
+               $('#lastname').focus(); 
+            }
+            console.log($lastname);
         };
-        lastNameValidation();
-        console.log($lastname);
+        lastNameValidation();  
 
 //Email - Make the email validate - contains "@" symbol and ".extension"
-        function emailValidation($email){
-            if(emailregex.test($email)){
+        function emailValidation(){
+            let $email = $('#email').val();
+            var emailRegExp = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$');
+            if(emailRegExp.test($email)){
                 return true;
             } else {
-               return alert(`Your description: " ${$('#email').val()}" is not a good description. Please insert alphabet characters only.`);
+               return alert(`" ${$('#email').val()}" is not a valid email address. Please insert alphabet characters only.`);
                 $('#email').focus();
-            };  
+            }
+            console.log($email);
         };
-        console.log($email);
+        
         emailValidation();
         
 //Phone - Make sure phone is only numeric characters and has at least 10 digits
-        function phoneValidation($phone){
-            if (phoneregex.test($phone)){
+        function phoneValidation(){
+            let $phone = $('#phone').val();
+            var phoneRegExp = new RegExp(/[0-9-()+]{3,20}/);
+            if (phoneRegExp.test($phone)){
                 return true;
-//            } else if ($phone.length < 10){
-//                $('#phoneAlert').innerText = "Please make sure that your phone number is 10 digits long.";
+            } else if ($phone.length < 10){
+                $('#phoneAlert').text("Please make sure that your phone number is 10 digits long.");
                 $('#phone').focus();
             } else {
-               return alert(`Your description: " ${$('#phone').val()}" is not a good description. Please insert alphabet characters only.`);
+               return alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numberic characters only.`);
                 $('#phone').focus();
-            };
+            }
+            console.log($phone);
         };
         phoneValidation();
-        console.log($phone); 
 
 //Company Validator funchtion   
-        function companyValidation($company){
-            if (regex.test($company)){
+        function companyValidation(){
+            let $company = $('#company').val();
+            var companyRegExp = new RegExp("^[a-zA-Z]+$");
+            if (companyRegExp.test($company)){
                 return true;
             } else {
-               return alert(`Your description: " ${$('#company').val()}" is not a good description. Please insert alphabet characters only.`);
+               return alert(`" ${$('#company').val()}" is not a valid company name. Please insert alphabet characters only.`);
                 $('#company').focus();
-            };
+            }
+            console.log($company);
         };
         companyValidation();
-        console.log($company);
-    
+        
 });//end document.ready 
 
 
 //
+//        //Variables
+//    let $firstname, $lastname, $email, $phone, $company;
+//    var firstnameRegExp = new RegExp("^[a-zA-Z]+$");
+//    var lastnameRegExp = new RegExp("^[a-zA-Z]+$");
+//    var companyRegExp = new RegExp("^[a-zA-Z]+$");
+//    var phoneRegExp = new RegExp(/[0-9-()+]{3,20}/);
+//    var emailRegExp = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$');
+//    
+////Input Values  
+//        $firstname = $('#firstname').val();
+//        $lastname = $('#lastname').val();
+//        $email = $('#email').val();
+//        $phone = $('#phone').val();
+//        $company = $('#company').val();
 //
 //
 ////--------------EXPERIMENTAL Submit Opacity function--------------------//      
