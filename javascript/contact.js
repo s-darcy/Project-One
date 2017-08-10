@@ -34,7 +34,7 @@ $(".submit").click(function(e) {
         function lastNameValidation(){
             let $lastname = $('#lastname').val();
             var lastnameRegExp = new RegExp("^[a-zA-Z]+$");
-            if(lastnameRegExp.test($lastname)){
+            if(!lastnameRegExp.test($lastname)){
                 alert(`"${$('#lastname').val()}" is not a valid last name. Please insert alphabet characters only.`);
                $('#lastname').focus(); 
             }
@@ -47,8 +47,8 @@ $(".submit").click(function(e) {
         function emailValidation(){
             let $email = $('#email').val();
             var emailRegExp = new RegExp('^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$');
-            if (emailRegExp.test($email)){
-                alert(`" ${$('#email').val()}" is not a valid email address. Please insert alphabet characters only.`);
+            if (!emailRegExp.test($email)){
+                alert(`"${$('#email').val()}" is not a valid email address. Please insert alphabet characters only.`);
                 $('#email').focus();
             } else {
                return true;
@@ -60,11 +60,10 @@ $(".submit").click(function(e) {
 //Phone - Make sure phone is only numeric characters and has at least 10 digits
         function phoneValidation(){
             let $phone = $('#phone').val();
-            console.log(typeof $phone);
             var phoneRegExp = new RegExp(/^\d{10}?$/);
             console.log(phoneRegExp.test($phone));
             if (!phoneRegExp.test($phone)){
-                alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numeric characters only.`);
+                alert(`"${$('#phone').val()}" is not a valid phone number. Please insert 10 numeric characters only.`);
                 $('#phone').focus();
             } else {
                 return true;
@@ -77,10 +76,8 @@ $(".submit").click(function(e) {
         function companyValidation(){
             let $company = $('#company').val();
             var companyRegExp = new RegExp("^[a-zA-Z]+$");
-            if (companyRegExp.test($company)){
-                true;
-            } else {
-               alert(`" ${$('#company').val()}" is not a valid company name. Please insert alphabet characters only.`);
+            if (!companyRegExp.test($company)){
+               alert(`"${$('#company').val()}" is not a valid company name. Please insert alphabet characters only.`);
                 $('#company').focus();
             }
             return true;
