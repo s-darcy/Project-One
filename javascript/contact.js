@@ -21,10 +21,8 @@ $(".submit").click(function(e) {
         function firstNameValidation(){
             let $firstname = $('#firstname').val();
             var firstnameRegExp = new RegExp("^[a-zA-Z]+$");
-            if(firstnameRegExp.test($firstname)){
-                true; 
-            } else {
-               alert(`" ${$('#firstname').val()}" is not a valid first name. Please insert alphabet characters only.`);
+            if(!firstnameRegExp.test($firstname)){
+               alert(`"${$('#firstname').val()}" is not a valid first name. Please insert alphabet characters only.`);
                 $('#firstname').focus();
             }
             return true;
@@ -37,9 +35,7 @@ $(".submit").click(function(e) {
             let $lastname = $('#lastname').val();
             var lastnameRegExp = new RegExp("^[a-zA-Z]+$");
             if(lastnameRegExp.test($lastname)){
-                true;
-            } else {
-               alert(`" ${$('#lastname').val()}" is not a valid last name. Please insert alphabet characters only.`);
+                alert(`"${$('#lastname').val()}" is not a valid last name. Please insert alphabet characters only.`);
                $('#lastname').focus(); 
             }
             return true;
@@ -64,10 +60,10 @@ $(".submit").click(function(e) {
 //Phone - Make sure phone is only numeric characters and has at least 10 digits
         function phoneValidation(){
             let $phone = $('#phone').val();
-            var phoneRegExp = new RegExp(/[0-9-()+]{3,20}/);
-            if ($phone.length !== 10){
-                alert("Please make sure that your phone number is 10 digits long.");
-            } else if (phoneRegExp.test($phone)){
+            console.log(typeof $phone);
+            var phoneRegExp = new RegExp(/^\d{10}?$/);
+            console.log(phoneRegExp.test($phone));
+            if (!phoneRegExp.test($phone)){
                 alert(`" ${$('#phone').val()}" is not a valid phone number. Please insert 10 numeric characters only.`);
                 $('#phone').focus();
             } else {
@@ -93,28 +89,3 @@ $(".submit").click(function(e) {
         companyValidation();
         
 });//end document.ready 
-
-
-////--------------EXPERIMENTAL Submit Opacity function--------------------//      
-////        $('input').on("keydown", function() {
-////            var inputValues = {
-////                $firstname : $('#firstname').val(),
-////                $lastname : $('#lastname').val(),
-////                $email : $('#email').val(),
-////                $phone : $('#phone').val(),
-////                $company : $('#company').val()
-////            }
-////            console.log('inputValues');
-////            
-////            for(var prop in inputValues) {
-////                console.log('inputValues');
-////                
-////                if(inputValues.prop !==""){
-////                    
-////                    //Submit button changes opacity when all 5 fields have inputs filled out
-////                    $('.submit').css('opactity', '1');
-////                    
-////                }
-////            };     
-////        });
-//            
